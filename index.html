@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uttam Das | Senior QA Engineer</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.15);
+      --border: #334155;
+      --tag-bg: #0f172a;
+      --tag-text: #38bdf8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 0;
+    }
+
+    header {
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+    }
+
+    .badge-clearance {
+      display: inline-block;
+      background: rgba(34, 197, 94, 0.15);
+      color: #4ade80;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.025em;
+    }
+
+    .title {
+      font-size: 1.25rem;
+      color: var(--accent);
+      margin-top: 0.25rem;
+      font-weight: 500;
+    }
+
+    .contact-bar {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .contact-bar a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-bar a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: #fff;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    p.summary {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-category {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .skill-category h3 {
+      font-size: 0.95rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .skill-category ul {
+      list-style-type: none;
+    }
+
+    .skill-category li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .job-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      position: relative;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .job-role {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .job-company {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .job-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .job-card ul {
+      margin-left: 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .job-card li {
+      margin-bottom: 0.4rem;
+    }
+
+    .highlight-pill {
+      margin-top: 1rem;
+      padding: 0.5rem 0.75rem;
+      background: var(--accent-glow);
+      border-left: 3px solid var(--accent);
+      font-size: 0.85rem;
+      color: #e2e8f0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .grid-duo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      border-radius: 8px;
+    }
+
+    .card-item h3 {
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+
+    .card-item p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="badge-clearance">&#10003; Public Trust Clearance (Valid to 2029) | US Citizen</div>
+      <h1>Uttam Das</h1>
+      <div class="title">Senior Quality Assurance Engineer</div>
+      <div class="contact-bar">
+        <span>&#128205; Fairfax, VA</span>
+        <a href="mailto:uttamdas007@gmail.com">&#9993; uttamdas007@gmail.com</a>
+        <a href="https://linkedin.com/in/uttam-das-5b052b21" target="_blank" rel="noopener noreferrer">&#128279; LinkedIn Profile</a>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+      <h2>Professional Profile</h2>
+      <p class="summary">
+        Senior QA Engineer with over 15 years of hands-on experience driving manual and automated test cycles for enterprise federal and commercial web applications. Specializes in end-to-end regression validation, Selenium/Playwright automation frameworks, RESTful API testing, and CI/CD quality gates. Proven expertise in Section 508 compliance testing, ISO/CMMI audit readiness, and defect lifecycle reduction in regulated, mission-critical environments.
+      </p>
+    </section>
+
+    <!-- Core Competencies -->
+    <section>
+      <h2>Technical & Functional Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Test Automation & CI/CD</h3>
+          <ul>
+            <li>Selenium &amp; Playwright</li>
+            <li>Cucumber (BDD)</li>
+            <li>Jenkins &amp; GitHub Pipelines</li>
+            <li>Cross-Browser Compatibility</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>API &amp; Backend Testing</h3>
+          <ul>
+            <li>Postman &amp; REST Assured</li>
+            <li>SQL Backend Validation</li>
+            <li>Oracle, MS SQL, PostgreSQL</li>
+            <li>JMeter Performance Testing</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Methodologies &amp; Tools</h3>
+          <ul>
+            <li>Agile / Scrum Ceremonies</li>
+            <li>Jira &amp; Zephyr Management</li>
+            <li>Confluence Documentation</li>
+            <li>Release Readiness Audits</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Compliance &amp; Systems</h3>
+          <ul>
+            <li>Section 508 Accessibility</li>
+            <li>ISO 9000/9001 Audits</li>
+            <li>CMMI Appraisal Standards</li>
+            <li>AWS, Azure Cloud &amp; Unix</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section>
+      <h2>Work Experience</h2>
+      <div class="timeline">
+
+        <!-- Professional Development -->
+        <div class="job-card">
+          <div class="job-header">
+            <div>
+              <div class="job-role">Technical Upskilling &amp; Applied Practice</div>
+              <div class="job-company">Independent Professional Development</div>
+            </div>
+            <div class="job-date">March 2025 &ndash; Present</div>
+          </div>
+          <ul>
+            <li>Engineered three targeted test automation and SQL data-validation repositories demonstrating hands-on reliability in modern CI/CD setups.</li>
+            <li>Acquired hands-on certifications in Oracle Cloud Infrastructure AI Foundations and Generative AI to support automated testing optimization.</li>
+          </ul>
+        </div>
+
+        <!-- IGI Inc. -->
+        <div class="job-card">
+          <div class="job-header">
+            <div>
+              <div class="job-role">Senior Quality Engineer</div>
+              <div class="job-company">IGI Inc.</div>
+            </div>
+            <div class="job-date">December 2024 &ndash; March 2025</div>
+          </div>
+          <ul>
+            <li>Executed functional, regression, and integration testing across core enterprise web applications.</li>
+            <li>Engineered and expanded robust Selenium automated regression suites to safeguard production releases.</li>
+            <li>Integrated automated suites directly into Jenkins CI/CD quality gates, preventing regression leaks.</li>
+            <li>Validated backend APIs with Postman and REST Assured; prioritized high-detail Jira defect logging.</li>
+          </ul>
+          <div class="highlight-pill">
+            <strong>Key Results:</strong> Expanded test automation coverage from 45% to 75% and trimmed regression cycle turnaround by 40%.
+          </div>
+        </div>
+
+        <!-- Concept Solutions LLC -->
+        <div class="job-card">
+          <div class="job-header">
+            <div>
+              <div class="job-role">Senior Quality Engineer</div>
+              <div class="job-company">Concept Solutions LLC</div>
+            </div>
+            <div class="job-date">December 2023 &ndash; April 2024</div>
+          </div>
+          <ul>
+            <li>Supported mission-critical Federal Aviation Administration (FAA) enterprise software releases.</li>
+            <li>Designed and executed manual test suites derived directly from complex federal requirements and user stories.</li>
+            <li>Authored Selenium with Java automated suites and ran multi-browser audits across Chrome, Edge, and Firefox.</li>
+            <li>Delivered structured release readiness reports directly to program stakeholders before deployment.</li>
+          </ul>
+          <div class="highlight-pill">
+            <strong>Key Results:</strong> Cut pre-UAT defect escape rates by 30% through strict requirement traceability.
+          </div>
+        </div>
+
+        <!-- CGH Technologies, Inc. -->
+        <div class="job-card">
+          <div class="job-header">
+            <div>
+              <div class="job-role">Senior QA Engineer</div>
+              <div class="job-company">CGH Technologies, Inc.</div>
+            </div>
+            <div class="job-date">November 2011 &ndash; September 2023</div>
+          </div>
+          <ul>
+            <li>Directed full end-to-end regression, integration, and user-flow validation for multi-year federal and regulatory programs.</li>
+            <li>Created and scaled maintainable, reusable Selenium automation frameworks to guarantee test repeatability.</li>
+            <li>Wrote complex SQL queries to enforce database integrity and verify data ingestion pipelines.</li>
+            <li>Established Section 508 practical compliance assessment workflows and audit-ready test documentation.</li>
+            <li>Facilitated defect triage meetings with engineering leads and served as QA focal point for federal audits.</li>
+          </ul>
+          <div class="highlight-pill">
+            <strong>Key Results:</strong> Participated in multiple formal ISO/CMMI compliance audits with zero major QA findings.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Certifications & Education -->
+    <section>
+      <h2>Education &amp; Credentials</h2>
+      <div class="grid-duo">
+        <div class="card-item">
+          <h3>Certifications &amp; Accreditations</h3>
+          <p>&bull; Oracle Cloud Infrastructure &ndash; AI Foundations (2025)</p>
+          <p>&bull; Databricks &ndash; Generative AI Foundations</p>
+          <p>&bull; Securiti &ndash; AI Security and Governance</p>
+          <p>&bull; Certified CMMI Auditor &ndash; ISACA (2011&ndash;2022)</p>
+          <p>&bull; Public Trust Clearance (Active through 2029)</p>
+        </div>
+        <div class="card-item">
+          <h3>Academic Degrees</h3>
+          <p><strong>B.S. in Computer Science</strong><br>Worcester State University</p>
+          <div style="margin-top: 0.5rem;"></div>
+          <p><strong>B.S. in Applied Physics</strong><br>Gujarat University</p>
+          <div style="margin-top: 0.5rem;"></div>
+          <p><strong>Oracle DBA Professional Diploma</strong><br>Worcester Polytechnic Institute</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Uttam Das &bull; Built with clean, accessible HTML/CSS</p>
+    </footer>
+  </div>
+
+</body>
+</html>
